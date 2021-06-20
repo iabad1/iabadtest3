@@ -1,0 +1,157 @@
+:root{
+
+    --main-bg-color: #75cff0;
+    
+}
+
+*, ::before, ::after{
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    scroll-behavior: smooth;
+
+    background-color: var(--main-bg-color);
+}
+
+header{
+    padding: 10px 0;
+    background-color: #75cff0;
+}
+
+#logo-Container img{
+    width: 150px;
+}
+
+#logo-Container{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+      margin: 0 auto;
+    max-width: 300px;
+    
+}
+
+#logoSlogan-container{
+   display: flex;
+   align-items: center;
+   justify-content: flex-end;
+   
+   
+   margin: 0 20px;
+
+}
+
+#hamburger-container{
+
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+
+    width: 30px;
+    height: 30px;
+    z-index: 2;
+    
+    cursor: pointer;
+   
+}
+
+.line{
+    
+  
+    background-color: #fff;
+    width: 25px;
+    height: 4px;
+    border-radius: 5px;
+
+    margin: 2px auto;
+    caret-color: transparent;
+    
+}
+
+.line.active:nth-child(1){
+    position: absolute;
+    transform: rotate(-45deg);
+    width: 30px;
+
+    transition: all 0.4s ease;
+}
+
+.line.active:nth-child(2){
+    display: none;
+
+}
+.line.active:nth-child(3){
+    position: absolute;
+    transform: rotate(45deg);
+    width: 30px;
+    transition: all 0.4s ease;
+}
+.nav-links{
+    
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+
+    background-color: var(--main-bg-color);
+    transition: all 0.4s ease;
+  
+      
+    width: 0;
+    height: 100vh;
+}
+
+.nav-links.active{
+    width: 100%;
+    transition: all 0.4s ease;
+
+}
+
+.nav-links *{
+    text-decoration: none;
+    list-style-type: none;
+
+    color: #000;
+}
+
+.nav-links a{
+    display: none;
+}
+
+.nav-links a.active{
+    display: block;
+    transition: all 0.2s ease;
+}
+
+.nav-links li{
+    margin-bottom: 50px;
+    font-size: 2rem;
+
+   
+    
+}
+
+.nav-links a:hover{
+    transition: all 0.2s ease;
+    color: #fff;
+}
+
+footer{
+    text-align: center;
+    background-color: var(--main-bg-color);
+
+    height: 100px;
+}
